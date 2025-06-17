@@ -66,6 +66,15 @@ def execute_opcode(opcode, operands, regs, ram):
         result = reg1_val << int(shift) & 0xFFFFFFFF
 
         regs[int(dest)] = result
+
+    # set less than
+    elif opcode == "SLT":
+        dest, reg1, reg2 = operands
+
+        if regs[int(reg1)] < regs[int(reg2)]:
+            regs[int(dest)] = 1
+        else:
+            regs[int(dest)] = 0
     
 
     # memory acces
@@ -200,3 +209,7 @@ def run_asm(instructions, regs, ram, debug=False):
             print(f"labels: {labels}")
             print(f"(next) instruction count: {ic}")
             print(regs)
+            print(f"Current ptr (x4): {regs[4]}")
+            print(f"Current value (x5): {ram.read_word(regs[4])}")
+            print(f"Current max (x3): {regs[3]}")
+            print(f"Elements remaining (x2): {regs[2]}")

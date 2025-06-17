@@ -5,7 +5,7 @@ Project for "Rechnerarchitekur": RISCV emulator
 ## Supported Instructions
 
 - Arithmetic: ADD, ADDI, SUB
-- Logical: AND, ANDI, OR, ORI, XOR, SLLI
+- Logical: AND, ANDI, OR, ORI, XOR, SLLI, SLT
 - Memory: LW, SW
 - Control Flow: BEQ, BNE, J, JAL, JALR
 

@@ -209,7 +209,3 @@ def run_asm(instructions, regs, ram, debug=False):
             print(f"labels: {labels}")
             print(f"(next) instruction count: {ic}")
             print(regs)
-            print(f"Current ptr (x4): {regs[4]}")
-            print(f"Current value (x5): {ram.read_word(regs[4])}")
-            print(f"Current max (x3): {regs[3]}")
-            print(f"Elements remaining (x2): {regs[2]}")

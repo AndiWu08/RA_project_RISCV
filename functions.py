@@ -57,6 +57,16 @@ def execute_opcode(opcode, operands, regs, ram):
 
         regs[int(dest)] = result
     
+    # shift left logical immmediate
+    elif opcode == "SLLI":
+        dest, reg1, shift = operands
+
+        reg1_val = regs[int(reg1)]
+        # shift value in reg1 and enforce 32 bit
+        result = reg1_val << int(shift) & 0xFFFFFFFF
+
+        regs[int(dest)] = result
+    
 
     # memory acces
     elif opcode == "SW":
@@ -120,16 +130,6 @@ def execute_opcode(opcode, operands, regs, ram):
 
         ic = regs[int(reg_target)] + int(offset)
         return True
-    
-    # shift left logical immmediate
-    elif opcode == "SLLI":
-        dest, reg1, shift = operands
-
-        reg1_val = regs[int(reg1)]
-        # shift value in reg1 and enforce 32 bit
-        result = reg1_val << int(shift) & 0xFFFFFFFF
-
-        regs[int(dest)] = result
 
 
 def clean_line(line):

@@ -23,6 +23,7 @@ Project for "Rechnerarchitekur": RISCV emulator
 ### Example Assembly Code
 
 the required example Code (and a few more) can be found in ./test/ and executed using mode 1
+note: execute prep08.txt before 08.txt to load an array into RAM
 
 ## Project Structure
 

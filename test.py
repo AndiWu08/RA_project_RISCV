@@ -19,7 +19,7 @@ while True:
     mode = input("select an option: ").strip().upper()
 
     if mode == '1':
-        filepath = input("path to .txt file in test: ")
+        filepath = input("path to .txt file: ")
         debug = input("enable debug-mode? y/n: ").strip().upper() == 'Y'
 
         instructions = functions.read_file(filepath)

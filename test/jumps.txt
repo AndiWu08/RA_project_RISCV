@@ -1,0 +1,8 @@
+addi x1 , x0 , 21
+jal x5 , double 
+
+j end
+double:
+slli x6 , x1 , 1 
+jalr x0 , 0 ( x5 ) 
+end:

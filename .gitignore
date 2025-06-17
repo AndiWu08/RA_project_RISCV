@@ -1,0 +1,13 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# VS Code
+.vscode/
+tempCodeRunnerFile.py
+
+# Other common Python files to ignore
+*.log
+.env
+venv/

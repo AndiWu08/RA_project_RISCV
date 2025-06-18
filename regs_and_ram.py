@@ -15,7 +15,9 @@ class RegisterRISC:
     def __str__(self):
         output = "--- CURRENT REGISTER CONTENTS ---\n"
         for i in range(len(self.regs)):
-           output += f"x{i}: {self.regs[i]}\n"
+           output += f"x{i:02}: {self.regs[i]}\t \t"
+           if (i + 1) % 4 == 0:
+               output += "\n"
         
         return output
          

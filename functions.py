@@ -155,7 +155,7 @@ def clean_line(line):
                             if (cleaned := op.replace(',', '')
                                             .replace('(', ' ')
                                             .replace(')', ' ')
-                                            .replace('X', '')  
+                                            .replace('X', '')
                                             .strip())
                         ]
         return opcode, operands 
@@ -166,6 +166,9 @@ def read_file(file):
     with open(file, 'r') as f:
         line_count = 0
         for line in f:
+            # get rid of parentheses to ensure proper handling in clean_line
+            line = line.replace('(', ' ').replace(')', ' ')
+            line = ' '.join(line.split())
             line = line.strip()
 
             # look for labels and save position in dictionary

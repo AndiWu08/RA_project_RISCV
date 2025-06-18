@@ -1,12 +1,19 @@
 addi x1, x0, 55
 jal x5, double 
 
+jal x5, test 
+
+jal x5, landing 
+
 j end
+
 double:
 slli x6, x1 , 5 
 jalr x0, 0(x5) 
-jalr x0, 0(x5 )
-jalr x0, 0( x5) 
+test:
+addi x25, x0, 6
 jalr x0, 0( x5 )
+landing:
+addi x20, x0, 55
 jalr x0, 0 (x5)   
 end:

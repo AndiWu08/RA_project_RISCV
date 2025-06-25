@@ -4,7 +4,7 @@ labels = {}
 
 def execute_opcode(opcode, operands, regs, ram):
     global ic
-    # Immediate Instructions
+    ## Immediate Instructions
     if opcode == "ADDI":
         dest, reg1, val = operands
         result = regs.regs[int(reg1)] + int(val)
@@ -24,7 +24,7 @@ def execute_opcode(opcode, operands, regs, ram):
         regs[int(dest)] = result
 
 
-    # arithmetic instructions
+    ## arithmetic instructions
     elif opcode == "ADD":
         dest, reg1, reg2 = operands
         result = regs[int(reg1)] + regs[int(reg2)]
@@ -38,7 +38,7 @@ def execute_opcode(opcode, operands, regs, ram):
         regs[int(dest)] = result
 
 
-    # logical instructions
+    ## logical instructions
     elif opcode == "AND":
         dest, reg1, reg2 = operands
         result = regs[int(reg1)] & regs[int(reg2)]
@@ -77,7 +77,7 @@ def execute_opcode(opcode, operands, regs, ram):
             regs[int(dest)] = 0
     
 
-    # memory acces
+    ## memory access
     elif opcode == "SW":
         reg_value, offset, reg_address = operands
 
@@ -95,7 +95,7 @@ def execute_opcode(opcode, operands, regs, ram):
         regs[int(dest)] = value
 
     
-    # branching 
+    ## branching 
     elif opcode == "BEQ":
         reg1, reg2, target = operands
 
@@ -141,6 +141,7 @@ def execute_opcode(opcode, operands, regs, ram):
         return True
 
 
+# get opcode and operands of current line
 def clean_line(line):
     # get opcode
         opcode = line[0]
@@ -161,6 +162,9 @@ def clean_line(line):
         return opcode, operands 
 
 
+# file gets parsed to list of instructions
+# labels are saved in dictionary
+# returns [instructions]
 def read_file(file):
     instructions = []
     with open(file, 'r') as f:
@@ -182,6 +186,7 @@ def read_file(file):
     return instructions
 
 
+# exexutes list of instructions
 def run_asm(instructions, regs, ram, debug=False):
     global ic
     ic = 0

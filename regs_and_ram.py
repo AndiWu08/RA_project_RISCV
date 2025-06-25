@@ -4,7 +4,7 @@ class RegisterRISC:
       self.regs = [0] * 32
 
     def __setitem__(self, idx, value):
-       # update register,
+       # update register contents,
        # x0 has to stay 0
        if idx != 0:
           self.regs[idx] = value

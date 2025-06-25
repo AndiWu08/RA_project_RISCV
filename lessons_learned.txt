@@ -3,4 +3,6 @@ Lessons learned / Erfahrungsbericht
 - neue Funktionen in kleinen Teilen direkt testen, sonst wird die Fehlersuche nur komplexer
 - Probleme dann lösen, wenn man sie lösen muss: 
     Beim durchlesen der Aufgabenstellung dachte ich jumps werden am kompliziertesten. 
-    Nachdem die Code Base stand aber deutlich unkomplizierter.
+    Nachdem die Code Base stand aber deutlich unkomplizierter als gedacht.
+
+

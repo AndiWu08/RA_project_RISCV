@@ -1,7 +1,6 @@
 addi x1, x0, 5
 addi x2, x0, 10
 add x23, x1, x2
-nonsense: 
 sub x4, x0, x1
 and x5, x2, x3
 or x6, x2, x3

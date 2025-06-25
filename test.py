@@ -7,7 +7,7 @@ ram = regs_and_ram.RAM()
 debug = False
 
 while True:
-    print("--- simple RISCV emulator ---\n"
+    print("\n--- simple RISCV emulator ---\n"
           "1: read .txt file with Assembler Code\n"
           "2: input Assembler Code oneliner\n"
           "3: Memory Dump\n"

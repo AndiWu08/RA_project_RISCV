@@ -189,6 +189,7 @@ def read_file(file):
 # exexutes list of instructions
 def run_asm(instructions, regs, ram, debug=False):
     global ic
+    global labels
     ic = 0
 
     # execute assembler code
@@ -217,3 +218,9 @@ def run_asm(instructions, regs, ram, debug=False):
             print(f"labels: {labels}")
             print(f"(next) instruction count: {ic}")
             print(regs)
+
+            if input("enter X to break, any other to continue: ").strip().upper() == 'X':
+                break
+    
+    # reset labels
+    labels =  {}

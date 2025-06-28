@@ -4,7 +4,3 @@ Lessons learned / Erfahrungsbericht
 - Probleme dann lösen, wenn man sie lösen muss: 
     Beim durchlesen der Aufgabenstellung dachte ich jumps werden am kompliziertesten. 
     Nachdem die Code Base stand aber deutlich unkomplizierter als gedacht.
-
-
-Anmerkung - GitHub vom Projekt (falls Verlauf interessant für Sie ist):
-https://github.com/AndiWu08/RA_project_RISCV
